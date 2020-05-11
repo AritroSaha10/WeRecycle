@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "61962162157",
+    "firebase_url": "https://categories-database-85469.firebaseio.com",
+    "project_id": "categories-database-85469",
+    "storage_bucket": "categories-database-85469.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61962162157:android:37b6f272cea7af27fb21e4",
+        "android_client_info": {
+          "package_name": "com.aritrosaha.aritr.communityprojectapptest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61962162157-sjvt28i32eidog7odtcgub746krgvi0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMl10ztRNL33xqJfu1IKvKTBD2Rfic2Pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61962162157-sjvt28i32eidog7odtcgub746krgvi0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

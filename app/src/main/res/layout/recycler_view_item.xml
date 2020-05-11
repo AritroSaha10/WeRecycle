@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/colorSurface"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/textView_itemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/itemImage"
+                android:text="Item Name"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/textView_itemInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layout_below="@id/textView_itemName"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/itemImage"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:text="Item Info\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sem diam, egestas vel lacinia vitae, consectetur vitae augue. Quisque congue bibendum condimentum. Nullam ullamcorper, erat in hendrerit malesuada, magna nisl commodo odio, ac porta dui quam a velit. Nulla lacus lorem, bibendum vel congue id, scelerisque vel eros. Aliquam euismod ex nec vulputate feugiat. Aliquam quis luctus augue. In venenatis, sem non viverra finibus, nisl turpis porta nisl, rhoncus pellentesque ante urna a quam."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/recyclingLegendImgView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:backgroundTint="#03a9f4"
+        android:tintMode="add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_circle_legend" />
+
+    <TextView
+        android:id="@+id/recyclingLegendTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Recycling Bin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="15sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclingLegendImgView"
+        app:layout_constraintStart_toEndOf="@+id/recyclingLegendImgView"
+        app:layout_constraintTop_toTopOf="@+id/recyclingLegendImgView" />
+
+
+    <ImageView
+        android:id="@+id/compostLegendImgView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:backgroundTint="#4caf50"
+        android:tintMode="add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclingLegendImgView"
+        android:background="@drawable/ic_circle_legend" />
+
+    <TextView
+        android:id="@+id/compostLegendTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Compost Bin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="15sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/compostLegendImgView"
+        app:layout_constraintStart_toEndOf="@+id/compostLegendImgView"
+        app:layout_constraintTop_toTopOf="@+id/compostLegendImgView" />
+
+    <ImageView
+        android:id="@+id/garbageLegendImgView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:backgroundTint="#546e7a"
+        android:tintMode="add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compostLegendImgView"
+        android:background="@drawable/ic_circle_legend" />
+
+    <TextView
+        android:id="@+id/garbageLegendTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Garbage Bin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="15sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/garbageLegendImgView"
+        app:layout_constraintStart_toEndOf="@+id/garbageLegendImgView"
+        app:layout_constraintTop_toTopOf="@+id/garbageLegendImgView" />
+
+
+    <ImageView
+        android:id="@+id/yardWasteLegendImgView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/ic_circle_legend"
+        android:backgroundTint="#8d6e63"
+        android:tintMode="add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/garbageLegendImgView"/>
+
+    <TextView
+        android:id="@+id/yardWasteLegendTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Yard Waste"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="15sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/yardWasteLegendImgView"
+        app:layout_constraintStart_toEndOf="@+id/yardWasteLegendImgView"
+        app:layout_constraintTop_toTopOf="@+id/yardWasteLegendImgView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

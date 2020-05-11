@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:key="index_category"
+        app:title="Index">
+
+        <Preference
+            app:key="index_legend"
+            app:title="Legend"
+            app:summary="Find out what the colours mean"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:key="appearance_category"
+        app:title="Appearance">
+
+        <SwitchPreferenceCompat
+            app:key="night_mode"
+            app:title="Night mode / Dark theme"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:key="help_category"
+        app:title="Help">
+
+        <Preference
+            app:key="contributors"
+            app:summary="Find out more about the creators and contributors of this app"
+            app:title="Contributors"/>
+
+        <Preference
+            app:key="play_store_review"
+            app:summary="Write a review for the app on the Google Play Store"
+            app:title="Write a review">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="market://details?id=com.aritrosaha.aritr.communityprojectapptest"
+                />
+        </Preference>
+
+        <Preference
+            app:key="feedback"
+            app:summary="Report technical issues or suggest new features"
+            app:title="Send feedback">
+
+            <!--
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="mailto:aritrostudios@gmail.com">
+                <extra
+                    android:name="android.intent.extra.SUBJECT"
+                    android:value="Feedback for the WeRecycle App"/>
+                <extra
+                    android:name="android.intent.extra.TEXT"
+                    android:value="Hello!\n\nWhile using the WeRecycle app, I found something / a few things that I would like to notify you of. [Please insert your feedback here]"/>
+            </intent>
+            -->
+
+        </Preference>
+
+        <Preference
+            app:key="privacy_policy"
+            app:title="Privacy Policy">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://sites.google.com/view/privacypolicyforwerecycle/home"/>
+        </Preference>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
