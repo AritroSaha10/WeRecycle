@@ -1,4 +1,4 @@
-package com.aritrosaha.aritr.communityprojectapptest;
+package com.aritrosaha.aritr.werecycleapp;
 
 import android.content.Intent;
 import android.net.Uri;

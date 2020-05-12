@@ -1,4 +1,4 @@
-package com.aritrosaha.aritr.communityprojectapptest;
+package com.aritrosaha.aritr.werecycleapp;
 
 public class Item {
     private String name;
