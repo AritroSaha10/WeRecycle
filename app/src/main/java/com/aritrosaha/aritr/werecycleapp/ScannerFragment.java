@@ -1,5 +1,6 @@
 package com.aritrosaha.aritr.werecycleapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -178,10 +179,10 @@ public class ScannerFragment extends Fragment {
 
         // when imgcap button is clicked, get image, predict what it is, then send the info to ResultsDisplayFragment
         // to show to the user
-        view.findViewById(R.id.imgCapture).setOnClickListener(v -> imgCap.takePicture(executor, new ImageCapture.OnImageCapturedListener() {
+        view.findViewById(R.id.imgCapture).setOnClickListener(v -> imgCap.takePicture(executor, new ImageCapture.OnImageCapturedCallback() {
             @Override
             public void onCaptureSuccess(ImageProxy imageProxy, int rotationDegrees) {
-                Fragment currentFragment = Objects.requireNonNull(Objects.requireNonNull(getActivity())
+                Fragment currentFragment = Objects.requireNonNull(requireActivity()
                         .getSupportFragmentManager()
                         .findFragmentById(R.id.container));
 
@@ -197,10 +198,11 @@ public class ScannerFragment extends Fragment {
 
                 // add loading placeholder
                 GifImageView loadingPlace = view.findViewById(R.id.loadingPlaceholder);
-                Objects.requireNonNull(getActivity()).runOnUiThread(() -> loadingPlace.setVisibility(View.VISIBLE));
+                requireActivity().runOnUiThread(() -> loadingPlace.setVisibility(View.VISIBLE));
 
                 //region Converting ImageProxy to a Bitmap object the model can use
-                Image img = imageProxy.getImage();
+
+                @SuppressLint("UnsafeExperimentalUsageError") Image img = imageProxy.getImage();
 
                 ByteBuffer buffer = imageProxy.getPlanes()[0].getBuffer();
                 byte[] bytes = new byte[buffer.capacity()];
@@ -242,7 +244,7 @@ public class ScannerFragment extends Fragment {
                 }
                 //endregion
 
-                currentFragment = Objects.requireNonNull(Objects.requireNonNull(getActivity())
+                currentFragment = Objects.requireNonNull(requireActivity()
                         .getSupportFragmentManager()
                         .findFragmentById(R.id.container));
 
@@ -279,7 +281,7 @@ public class ScannerFragment extends Fragment {
 
                                     // start results display fragment to show it all
                                     ResultsDisplayFragment resultsDisplayFragment = ResultsDisplayFragment.newInstance(labels, probabilities);
-                                    final FragmentTransaction transaction = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
+                                    final FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
                                     transaction.replace(R.id.container, resultsDisplayFragment);
                                     transaction.addToBackStack(null);
 
