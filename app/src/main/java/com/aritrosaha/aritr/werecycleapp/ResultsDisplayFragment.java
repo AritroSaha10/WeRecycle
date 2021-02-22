@@ -20,8 +20,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-import java.util.Objects;
-
 public class ResultsDisplayFragment extends Fragment {
 
     // get index of target in, useful in getting most probable class
@@ -99,20 +97,28 @@ public class ResultsDisplayFragment extends Fragment {
         if (maxProbability <= 0.65){
             // set text
             topTextView.setText("I'm not sure");
-            scannerTextView.setText("what this is :(");
+            scannerTextView.setText("what this is");
+
+            // Make sure the photo shows up properly
+            imageRepresentation.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+            imageRepresentation.setContentDescription("Not sure");
 
             // set img to question mark
-            Glide.with(Objects.requireNonNull(getContext()))
+            Glide.with(requireContext())
                     .load(R.drawable.ic_question_mark)
                     .apply(new RequestOptions()
                             .placeholder(R.drawable.loading_placeholder)
                             .fitCenter())
-                    .thumbnail(Glide.with(getContext()).load(R.drawable.loading_placeholder))
+                    .thumbnail(Glide.with(requireContext()).load(R.drawable.loading_placeholder))
                     .into(imageRepresentation);
 
         } else {
             // tell user what object has been decided
-            scannerTextView.setText("the " + labelForProbability + " bin!");
+            scannerTextView.setText("the " + labelForProbability + " bin.");
+
+            // Make sure the photo shows up properly
+            imageRepresentation.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageRepresentation.setContentDescription(labelForProbability);
 
             // set image to a bin, and change color based on result
             Log.d("MLLabel", labelForProbability);
@@ -132,7 +138,7 @@ public class ResultsDisplayFragment extends Fragment {
         Button retryButton = view.findViewById(R.id.scanAgainButton);
         retryButton.setOnClickListener(view1 -> {
             ScannerFragment scannerFragment = new ScannerFragment();
-            final FragmentTransaction transaction = Objects.requireNonNull(getActivity()).getSupportFragmentManager().beginTransaction();
+            final FragmentTransaction transaction = requireActivity().getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.container, scannerFragment);
             transaction.addToBackStack(null);
             transaction.commit();
@@ -140,15 +146,8 @@ public class ResultsDisplayFragment extends Fragment {
 
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         super.onAttach(context);
     }
 
