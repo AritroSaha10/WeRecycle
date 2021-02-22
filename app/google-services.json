@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "61962162157-4ktd2h73r2moeorad5geqgu8fr2a370c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aritrosaha.aritr.communityprojectapptest",
+            "certificate_hash": "8632a619fae6d80204cd77eadd586d82fbbf5127"
+          }
+        },
+        {
           "client_id": "61962162157-sjvt28i32eidog7odtcgub746krgvi0d.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -22,6 +30,49 @@
       "api_key": [
         {
           "current_key": "AIzaSyCMl10ztRNL33xqJfu1IKvKTBD2Rfic2Pc"
+        },
+        {
+          "current_key": "AIzaSyCOOV5cTf7k1TXcwsvotfTvmzJKaVsx5Uo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61962162157-sjvt28i32eidog7odtcgub746krgvi0d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61962162157:android:e9e87b13b772aae5fb21e4",
+        "android_client_info": {
+          "package_name": "com.aritrosaha.aritr.werecycleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61962162157-6k0g7o2mk8ulic225a4vhn9qjqijuqt7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aritrosaha.aritr.werecycleapp",
+            "certificate_hash": "d8a8c00d1d945696253d09230f303abe00c87840"
+          }
+        },
+        {
+          "client_id": "61962162157-sjvt28i32eidog7odtcgub746krgvi0d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMl10ztRNL33xqJfu1IKvKTBD2Rfic2Pc"
+        },
+        {
+          "current_key": "AIzaSyCOOV5cTf7k1TXcwsvotfTvmzJKaVsx5Uo"
         }
       ],
       "services": {
