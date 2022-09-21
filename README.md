@@ -30,6 +30,6 @@ Learn to sort your waste using an index of items and their respective bins and a
 https://play.google.com/store/apps/details?id=com.aritrosaha.aritr.werecycleapp
 
 ## Copyright
-© 2021 Aritro S, Mohil K, and Yusuf L. All rights reserved. 
+© 2021 Aritro S, [Mohil K](https://github.com/lbcmk), and Yusuf L. All rights reserved. 
 
 Modification and redistribution of the source code is not allowed.  
